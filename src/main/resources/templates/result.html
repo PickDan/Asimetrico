@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Claves</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa; /* Fondo azul claro */
+            color: #004d40; /* Texto en verde oscuro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            text-align: center;
+        }
+        h1 {
+            color: #00796b; /* Color verde oscuro para el título */
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+        strong {
+            color: #00796b; /* Color verde oscuro para el texto en negrita */
+        }
+        pre {
+            background-color: #ffffff; /* Fondo blanco para el bloque de código */
+            border: 1px solid #00796b; /* Borde verde oscuro */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es largo */
+            color: #004d40; /* Texto en verde oscuro para el bloque de código */
+            white-space: pre-wrap; /* Ajuste de espacio en blanco */
+            width: 80%; /* Ancho del bloque de código */
+            max-width: 800px; /* Ancho máximo para el bloque de código */
+        }
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #00796b; /* Color verde oscuro para el enlace */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00796b; /* Borde verde oscuro para el enlace */
+            border-radius: 0.25rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        a:hover {
+            background-color: #00796b; /* Fondo verde oscuro en hover */
+            color: #ffffff; /* Texto blanco en hover */
+        }
+    </style>
+</head>
+<body>
+<h1>Resultado de Claves</h1>
+<p><strong>Clave Pública:</strong></p>
+<pre th:text="${publicKey}"></pre>
+
+<p><strong>Clave Privada:</strong></p>
+<pre th:text="${privateKey}"></pre>
+
+<a href="/">Generar Nuevas Claves</a>
+</body>
+</html>
